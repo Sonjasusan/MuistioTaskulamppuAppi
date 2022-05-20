@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MuistioTaskulamppuAppi.MainPage">
+
+    <!-- Tyylitiedoston viittaus -->
+    <!--<CarouselPage.Resources>
+        <StyleSheet Source="/Assets/Tyylit.css" />
+    </CarouselPage.Resources>-->
+
+    <!-- Muistion content page -->
+    <ContentPage>
+
+        <ScrollView>
+            <StackLayout>
+
+                <Frame BackgroundColor="Black" Padding="16">
+
+                    <Label Text="Muistio" HorizontalTextAlignment="Center"
+                   TextColor="Orange" FontSize="24"/>
+
+                </Frame>
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+
+                    <Label Text="pyyhkäise oikealle käyttääksesi taskulamppua" Padding="20" FontSize="16" BackgroundColor="Azure"  Margin="0, 0, 0, 30" />
+
+                    <Entry x:Name="inputKentta" Placeholder="Kirjoita tähän..." />
+
+                    <Button x:Name="tallennusNappi" StyleClass="btn" Text="Tallenna" Clicked="tallennusNappi_Clicked" />
+                    <Button x:Name="poistoNappi" Text="Tyhjennä" StyleClass="btn" Clicked="poistoNappi_Clicked" />
+
+                    <Label x:Name="vahvistusInfo" IsVisible="false" Text="Vahvista poistaminen ao. kytkimellä" />
+                    <Switch x:Name="vahvistusKytkin" IsVisible="false" IsToggled="False" Toggled="vahvistusKytkin_Toggled"/>
+
+
+
+                    <Label x:Name="outputLabel" IsVisible="true" />
+
+                </StackLayout>
+
+                <Frame BackgroundColor="Black" Padding="16" CornerRadius="0">
+                    <Label Text="made by me" HorizontalTextAlignment="Center" TextColor="Orange" FontSize="14"/>
+                </Frame>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage>
+    
+    
+    <ContentPage>
+
+        <StackLayout>
+
+            <Frame BackgroundColor="Black" Padding="16">
+
+                <Label Text="Taskulamppu" HorizontalTextAlignment="Center"
+                   TextColor="white" FontSize="24"/>
+            </Frame>
+
+            <StackLayout  HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Label Text="Pyyhkäise vasemmalle käyttääksesi muistiota" Padding="20" FontSize="16" BackgroundColor="Azure"  Margin="0, 0, 0, 30" />
+
+
+                <Button x:Name="valoNappi" StyleClass="btn" Clicked="valoNappi_Clicked" Text="Valo päälle" />
+                <Button x:Name="valoPoisNappi" IsVisible="false" Clicked="valoPoisNappi_Clicked" StyleClass="btn" Text="Valo pois" />
+
+            </StackLayout>
+            
+            
+            <Frame BackgroundColor="Black" Padding="16" CornerRadius="0">
+                <Label Text="made by me" HorizontalTextAlignment="Center" TextColor="Orange" FontSize="14"/>
+            </Frame>
+            
+
+        </StackLayout>
+    </ContentPage>
+
+</CarouselPage>
