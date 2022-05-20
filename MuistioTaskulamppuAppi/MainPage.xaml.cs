@@ -15,7 +15,7 @@ namespace MuistioTaskulamppuAppi
         string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder
      .LocalApplicationData), "muistio.txt");
 
-        string teksti = "";
+        string teksti = ""; //Muistion tekstiä varten teksti -merkkijono
         public MainPage()
         {
             InitializeComponent();
@@ -86,9 +86,9 @@ namespace MuistioTaskulamppuAppi
 
             else //Muussa tapauksessa
             {
-                await Flashlight.TurnOnAsync();
-                valoNappi.IsVisible = false;
-                valoPoisNappi.IsVisible = true;
+                await Flashlight.TurnOnAsync(); //Valo päälle
+                valoNappi.IsVisible = false; //Valo nappi pois näkyvistä
+                valoPoisNappi.IsVisible = true; //valopois- nappi näkyviin
             }            
         }
 
@@ -96,7 +96,7 @@ namespace MuistioTaskulamppuAppi
         {
             await Flashlight.TurnOffAsync();
             valoNappi.IsVisible = true;
-            valoPoisNappi.IsVisible = false;
+            valoPoisNappi.IsVisible = false; //valopois-nappi piiloon
         }
     }
 
